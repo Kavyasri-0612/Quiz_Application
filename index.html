@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1 class="quiz-title">Quiz App</h1>
+
+    <div id="start-box">
+      <p>Select a topic to start 🎯</p>
+
+      <div class="topics">
+        <button class="topic-btn" onclick="startQuiz(9)">General Knowledge</button>
+        <button class="topic-btn" onclick="startQuiz(18)">Computer Science</button>
+        <button class="topic-btn" onclick="startQuiz(21)">Sports</button>
+        <button class="topic-btn" onclick="startQuiz(23)">History</button>
+        <button class="topic-btn" onclick="startQuiz(17)">Science & Nature</button>
+        <button class="topic-btn" onclick="startQuiz(11)">Entertainment</button>
+      </div>
+    </div>
+
+    <div id="quiz-box" class="hidden">
+      <div class="quiz-header">
+        <span id="progress"></span>
+        <span id="timer">Time: 15s</span>
+      </div>
+      <p id="question">Loading question...</p>
+      <ul id="options" class="options-list"></ul>
+      <button id="next-btn" class="btn">Next</button>
+    </div>
+
+    <div class="result-box hidden" id="result-box">
+      <h2>Quiz Completed 🎉</h2>
+      <p id="score-text"></p>
+      <button class="btn" onclick="restartQuiz()">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
